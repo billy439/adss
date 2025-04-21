@@ -1,0 +1,211 @@
+/* === Base Layout === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('images/farm-6625453_1920.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* === Header & Navigation === */
+header {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.nav .nav-link {
+    color: #ccc;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav .nav-link:hover,
+.nav .nav-link.active {
+    color: #00ffb3;
+    font-weight: bold;
+}
+
+/* === Headings === */
+h2, h3 {
+    color: #00ffb3;
+    font-weight: 600;
+}
+
+h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* === Table === */
+.table {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table th,
+.table td {
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table th {
+    background-color: rgba(0, 255, 179, 0.15);
+}
+
+.table-bordered td, 
+.table-bordered th {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* === Recommendations List === */
+ul {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* === Form === */
+form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,255,179,0.2);
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #00ffb3;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+}
+
+.form-control:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px #00ffb3;
+}
+
+/* === Button === */
+.btn-success {
+    background-color: #00ffb3;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    background-color: #00d19a;
+    color: #000;
+}
+
+/* === Footer === */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .table th, .table td {
+        font-size: 0.9rem;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+}
+/* Navigation menu */
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-nav .nav-item {
+    list-style: none;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-right: 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    line-height: 20px;
+    transition: color 0.3s ease;
+    position: relative;
+    right: -800px; /* Move 3 times further to the right (previously -360px, now -1080px) */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #d1d5db;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #0e9615;
+    font-weight: bold;
+  }
+  /* Header */
+  header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo_section {
+    position: absolute;
+    top: -120px;
+    left: -100px;
+    padding: 0;
+  }
+  
+  .logo img {
+    max-width: -60px;
+    height: auto;
+  }
+  

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soil Health Monitoring | ADSS Zimbabwe</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="soil health monitoring.css" />
+</head>
+
+<body>
+  
+      <!-- Header -->
+      <header class="bg-transparent text-white">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+          
+          <!-- Updated Logo Section -->
+          <div class="logo_section">
+            <img src="images/logo bv.png" alt="ADSS Logo" />
+          </div>
+          
+          <!-- Navigation -->
+          <nav class="navigation navbar navbar-dark">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="homepage.html" class="nav-link hover:text-gray-200">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="features.html" class="nav-link hover:text-gray-200">Features</a>
+              </li>
+              <li class="nav-item active">
+                <a href="soil health monitoring.html" class="nav-link hover:text-gray-200">Soil Health Monitoring</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link hover:text-gray-200">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+  <!-- Main Content -->
+  <main class="container mt-5 text-white">
+    <h2 class="text-center mb-4">Zimbabwe Soil Health Monitoring</h2>
+    <p class="text-center">Monitoring soil conditions across Zimbabwe’s agricultural regions to enhance sustainable farming practices.</p>
+
+    <!-- Soil Data by Region -->
+    <section class="mt-5">
+      <h3>Soil Conditions by Farming Region</h3>
+      <table class="table table-dark table-bordered mt-3">
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Soil Type</th>
+            <th>pH Level</th>
+            <th>Organic Matter (%)</th>
+            <th>Nitrogen</th>
+            <th>Phosphorus</th>
+            <th>Potassium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Region I</td>
+            <td>Red Clay Soils</td>
+            <td>6.2</td>
+            <td>4.1</td>
+            <td>Medium</td>
+            <td>High</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>Region II</td>
+            <td>Sandy Loam</td>
+            <td>5.8</td>
+            <td>3.5</td>
+            <td>Low</td>
+            <td>Medium</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>Region III</td>
+            <td>Silty Clay</td>
+            <td>5.4</td>
+            <td>2.8</td>
+            <td>Low</td>
+            <td>Low</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>Region IV</td>
+            <td>Sandy Soils</td>
+            <td>5.0</td>
+            <td>1.9</td>
+            <td>Very Low</td>
+            <td>Low</td>
+            <td>Low</td>
+          </tr>
+          <tr>
+            <td>Region V</td>
+            <td>Shallow Soils</td>
+            <td>4.7</td>
+            <td>1.3</td>
+            <td>Very Low</td>
+            <td>Very Low</td>
+            <td>Low</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="mt-5">
+      <h3>Recommendations for Improvement</h3>
+      <ul>
+        <li><strong>Region IV & V:</strong> Use compost and cover crops to improve organic matter and moisture retention.</li>
+        <li><strong>Region II:</strong> Apply lime to adjust soil pH and encourage nutrient uptake.</li>
+        <li><strong>All Regions:</strong> Encourage periodic soil testing every 6–12 months.</li>
+      </ul>
+    </section>
+
+    <!-- Report Soil Health -->
+    <section class="mt-5">
+      <h3>Submit Soil Health Report</h3>
+      <form id="soil-report-form" class="bg-dark p-4 rounded mt-3">
+        <div class="form-group">
+          <label for="region">Farming Region</label>
+          <select class="form-control" id="region" required>
+            <option value="">Select Region</option>
+            <option>Region I</option>
+            <option>Region II</option>
+            <option>Region III</option>
+            <option>Region IV</option>
+            <option>Region V</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ph">pH Level</label>
+          <input type="number" step="0.1" class="form-control" id="ph" required />
+        </div>
+        <div class="form-group">
+          <label for="organic">Organic Matter (%)</label>
+          <input type="number" step="0.1" class="form-control" id="organic" required />
+        </div>
+        <div class="form-group">
+          <label for="notes">Additional Notes</label>
+          <textarea class="form-control" id="notes" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit Report</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-5 bg-dark text-muted">
+    &copy; 2025 Agrometeorological DSS | Zimbabwe Soil Health Monitoring
+  </footer>
+
+  <script>
+    document.getElementById('soil-report-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you! Your soil report has been submitted.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

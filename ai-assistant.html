@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Assistant | ADSS</title>
+  <link rel="stylesheet" href="ai.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+    }
+
+    .chat-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .chat-box {
+      height: 400px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background: #f9f9f9;
+      margin-bottom: 1rem;
+    }
+
+    .chat-message {
+      margin-bottom: 1rem;
+    }
+
+    .chat-message.user {
+      text-align: right;
+      color: #047857;
+      font-weight: bold;
+    }
+
+    .chat-message.bot {
+      text-align: left;
+      color: #1f2937;
+    }
+
+    .chat-input {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    .chat-input button {
+      background-color: #047857;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    .chat-input button:hover {
+      background-color: #065f46;
+    }
+
+    .banner-section {
+      background: url('banner.jpg') center/cover no-repeat;
+      position: relative;
+      padding: 4rem 0;
+      text-align: center;
+      color: white;
+    }
+
+    .banner-section .overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-section .content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-green-700 text-white py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <a href="index.html" class="flex items-center">
+        <img src="logo.png" alt="ADSS Logo" class="h-8 mr-2" />
+        <span class="text-xl font-bold">ADSS</span>
+      </a>
+      <nav class="space-x-6">
+        <a href="index.html" class="text-white">Home</a>
+        <a href="features.html" class="text-white">Features</a>
+        <a href="ai-assistant.html" class="text-white font-semibold underline">AI Assistant</a>
+        <a href="contact.html" class="text-white">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner-section">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="text-4xl font-bold">AI Assistant</h1>
+      <p class="mt-4 text-lg">Ask anything about your farm, crop, or weather</p>
+    </div>
+  </section>
+
+  <!-- Chat Area -->
+  <section class="py-10">
+    <div class="chat-container">
+      <div class="chat-box" id="chatBox">
+        <!-- Chat messages go here -->
+      </div>
+      <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your question..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-8 text-center">
+    <p>&copy; 2025 ADSS - Agrometeorological Decision Support System. All rights reserved.</p>
+    <p><a href="contact.html" class="underline">Contact Us</a></p>
+  </footer>
+
+  <!-- Chatbot Script -->
+  <script>
+    const chatBox = document.getElementById("chatBox");
+    const userInput = document.getElementById("userInput");
+    const API_URL = 'https://api.openai.com/v1/chat/completions/{completion_id}'; // Replace with your backend API if different
+
+    // Initial message from the bot
+    appendMessage("Hello! How can I help you today?", "bot");
+
+    // Scroll to the bottom of the chat box
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    // Function to scroll to the bottom of the chat box
+    function scrollToBottom() {
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // Add scroll event listener
+    chatBox.addEventListener("scroll", scrollToBottom);
+
+    // Add enter key event listener
+    userInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        sendMessage();
+      }
+    });
+
+    // Add click event listener to the "Send" button
+    document.querySelector(".chat-input button").addEventListener("click", sendMessage);
+
+
+
+
+    
+
+    function appendMessage(content, sender) {
+      const messageDiv = document.createElement("div");
+      messageDiv.classList.add("chat-message", sender);
+      messageDiv.textContent = content;
+      chatBox.appendChild(messageDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    async function sendMessage() {
+      const message = userInput.value.trim();
+      if (!message) return;
+
+      appendMessage(message, "user");
+      userInput.value = "";
+      appendMessage("Thinking...", "bot");
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ question: message })
+        });
+
+        const data = await response.json();
+        // Remove "Thinking..." placeholder
+        const lastBotMessage = document.querySelector(".chat-message.bot:last-child");
+        lastBotMessage.remove();
+
+        if (data.reply) {
+          appendMessage(data.reply, "bot");
+        } else {
+          appendMessage("Sorry, I couldn't get an answer.", "bot");
+        }
+      } catch (error) {
+        console.error("Chatbot Error:", error);
+        const lastBotMessage = document.querySelector(".chat-message.bot:last-child");
+        if (lastBotMessage) lastBotMessage.remove();
+        appendMessage("An error occurred. Please try again later.", "bot");
+      }
+    }
+  </script>
+
+</body>
+</html>

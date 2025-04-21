@@ -1,0 +1,223 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Banner Background Wrapper */
+.banner-bg {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('images/meadow-5648849_1280.jpg'); /* Replace with your actual banner path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+    z-index: 1;
+}
+
+.relative.z-10 {
+    position: relative;
+    z-index: 10;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    color: #333;
+}
+
+/* Loader */
+.loader_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader img {
+    width: 50px;
+}
+
+/* Header */
+header {
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header .navbar {
+    margin-top: 20px;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header .navbar ul li {
+    margin: 0 20px;
+}
+
+header .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+header .navbar ul li a:hover,
+header .navbar ul li a.active {
+    color: #ffb300;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+main p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+}
+
+/* Weather Section */
+.weather-section, .forecast-section {
+    background: #0e9615(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.weather-section h2, .forecast-section h2 {
+    font-size: 24px;
+    color: #0e9615;
+    margin-bottom: 20px;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.forecast-card p {
+    font-size: 16px;
+    color: #f1f1f1;
+}
+
+/* Footer */
+footer {
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 28px;
+    }
+
+    .forecast-card p {
+        font-size: 14px;
+    }
+}
+
+/* Navigation menu */
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+  
+.navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+  
+.navbar-nav .nav-item {
+    list-style: none;
+}
+  
+.navbar-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-right: 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    line-height: 20px;
+    transition: color 0.3s ease;
+    position: relative;
+    right: -680px;
+}
+  
+.navbar-nav .nav-link:hover {
+    color: #d1d5db;
+}
+  
+.navbar-nav .nav-link.active {
+    color: #0e9615;
+    font-weight: bold;
+}
+
+/* Header positioning and logo */
+header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo_section {
+    position: absolute;
+    top: -120px;
+    left: -100px;
+    padding: 0;
+}
+
+.logo img {
+    max-width: -60px;
+    height: auto;
+}

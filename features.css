@@ -1,0 +1,285 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: transparent;
+  color: #1f2937;
+}
+
+/* Full-page banner background */
+.banner-bg {
+  background: url('images/pexels-n-voitkevich-5712871.jpg') no-repeat center center / cover;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner-bg .container,
+.banner-bg .relative {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Text Shadow */
+.hero-text {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Header */
+header a {
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Logo Size */
+.h-8 {
+  height: 2rem;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+}
+
+.text-gray-800 {
+  color: #1f2937;
+}
+
+.text-gray-200 {
+  color: #e5e7eb;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.md\:text-5xl {
+  font-size: 3rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+/* Flex and Grid */
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-x-6 > * + * {
+  margin-left: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.md\:grid-cols-3 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+  }
+}
+
+a.feature-card {
+  background-color: transparent;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.95rem;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  margin: 0.25rem; /* Slight margin to help with spacing inside wrapper */
+}
+
+a.feature-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+a.feature-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+a.feature-card p {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Footer */
+footer {
+  background-color: #047857;
+  color: white;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #e5e7eb;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+/* Navigation menu */
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-nav .nav-item {
+  list-style: none;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  text-decoration: none;
+  padding-top: 15px;
+  padding-right: 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  line-height: 20px;
+  transition: color 0.3s ease;
+  position: relative;
+  right: -450px; /* Move 3 times further to the right (previously -360px, now -1080px) */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d1d5db;
+}
+
+.navbar-nav .nav-link.active {
+  color: #0e9615;
+  font-weight: bold;
+}
+/* Header */
+header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo_section {
+  position: absolute;
+  top: -120px;
+  left: -100px;
+  padding: 0;
+}
+
+.logo img {
+  max-width: -60px;
+  height: auto;
+}

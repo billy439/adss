@@ -1,0 +1,205 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+/* Full-page banner background */
+.banner-bg {
+  background-image: url('images/nature-3526840_1920.jpg'); /* change if needed */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Optional dark overlay for contrast */
+.banner-bg .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Ensure content stays above overlay */
+.banner-bg .relative {
+  position: relative;
+  z-index: 2;
+}
+
+/* Header */
+header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo_section {
+  position: absolute;
+  top: -120px;
+  left: -100px;
+  padding: 0;
+}
+
+.logo img {
+  max-width: -60px;
+  height: auto;
+}
+
+/* Navigation menu */
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-nav .nav-item {
+  list-style: none;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  text-decoration: none;
+  padding-top: 15px;
+  padding-right: 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  line-height: 20px;
+  transition: color 0.3s ease;
+  position: relative;
+  right: -850px; /* Move 3 times further to the right (previously -360px, now -1080px) */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d1d5db;
+}
+
+.navbar-nav .nav-link.active {
+  color: #0e9615;
+  font-weight: bold;
+}
+
+/* Section headings */
+h2, h3 {
+  font-weight: bold;
+}
+
+.hero-text {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Section layout */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+section p {
+  color: #e5e7eb;
+}
+
+/* Features section layout */
+#features .features-wrapper {
+  display: flex;
+  justify-content: space-between; /* Align cards in a row and distribute space */
+  align-items: flex-start; /* Align the cards to the top */
+  gap: 2rem; /* Space between each card */
+  flex-wrap: nowrap; /* Ensure they stay in one row, no wrapping */
+  padding: 2rem 1rem;
+}
+
+.features-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; /* Reduced spacing between cards */
+  flex-wrap: wrap;
+}
+
+a.feature-card {
+  background-color: transparent;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.95rem;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  margin: 0.25rem; /* Slight margin to help with spacing inside wrapper */
+}
+
+a.feature-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+a.feature-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+a.feature-card p {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Buttons */
+a.bg-green-700 {
+  background-color: #047857;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.bg-green-700:hover {
+  background-color: #065f46;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #d1d5db;
+}
+
+/* Custom spacing for hero section */
+.hero-section {
+  margin-top: 12rem; /* Move hero section further down */
+}
+

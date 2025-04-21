@@ -1,0 +1,183 @@
+/* === General Reset === */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('images/istockphoto-1130464088-1024x1024.jpg')  no-repeat center center / cover;
+    background-size: cover;
+    color: #fff;
+}
+
+/* === Header & Navigation === */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav .nav-link {
+    margin: 0 10px;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.nav .nav-link:hover,
+.nav .nav-link.active {
+    color: #00ffb3;
+}
+
+/* === Main Content === */
+main {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 16px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+h1, h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+/* === Tables === */
+.table {
+    margin-top: 15px;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table thead {
+    background-color: #222;
+}
+
+.table-dark tbody tr {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-dark tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.text-success {
+    color: #00ffb3 !important;
+}
+
+.text-danger {
+    color: #ff4d4d !important;
+}
+
+/* === Seasonal Tips === */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* === Footer === */
+footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .table th, .table td {
+        font-size: 0.9rem;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav .nav-link {
+        margin: 8px;
+    }
+}
+/* Navigation menu */
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-nav .nav-item {
+    list-style: none;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-right: 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    line-height: 20px;
+    transition: color 0.3s ease;
+    position: relative;
+    right: -820px; /* Move 3 times further to the right (previously -360px, now -1080px) */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #d1d5db;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #0e9615;
+    font-weight: bold;
+  }
+  /* Header */
+  header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo_section {
+    position: absolute;
+    top: -120px;
+    left: -100px;
+    padding: 0;
+  }
+  
+  .logo img {
+    max-width: -60px;
+    height: auto;
+  }
+  

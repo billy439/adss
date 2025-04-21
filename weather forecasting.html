@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather Forecast | ADSS</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="weather forecasting.css">
+</head>
+<body>
+  <div class="banner-bg">
+    <div class="overlay"></div>
+    <div class="relative z-10">
+
+      <!-- Loader -->
+      <div class="loader_bg">
+          <div class="loader"><img src="images/loading.gif" alt="Loading..." /></div>
+      </div>
+
+      <!-- Header -->
+      <header class="bg-transparent text-white">
+          <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+              <!-- Logo Section -->
+              <div class="logo_section">
+                  <img src="images/logo bv.png" alt="ADSS Logo" />
+              </div>
+
+              <!-- Navigation -->
+              <nav class="navigation navbar navbar-dark">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a href="homepage.html" class="nav-link hover:text-gray-200">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="features.html" class="nav-link hover:text-gray-200">Features</a>
+                      </li>
+                      <li class="nav-item active">
+                          <a href="weather forecasting.html" class="nav-link hover:text-gray-200">Weather Forecasting</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="contact.html" class="nav-link hover:text-gray-200">Contact</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+
+      <!-- Main Content Section -->
+      <main class="main-content text-white">
+          <div class="container py-12">
+              <h1 class="text-4xl font-bold mb-4">Weather Forecasting</h1>
+              <p class="text-lg mb-8">Stay up-to-date with accurate weather forecasts to plan your farming activities efficiently.</p>
+
+              <!-- Current Weather Section -->
+              <div class="current-weather mb-10">
+                  <div class="card bg-white bg-opacity-10 p-6 rounded-lg shadow-md">
+                      <h2 class="text-2xl font-semibold mb-2">Alerts and Warnings</h2>
+                      <p>Real-time alerts for extreme weather events (e.g., floods, droughts).</p>
+                      <p>Warnings for potential crop diseases or pests.</p>
+                      <a href="https://agriculture.co.zw/latest/weather/" class="text-blue-300 underline">Zimbabwe Agricultural Weather Forecast</a>
+                  </div>
+              </div>
+
+              <!-- Weather Forecast Section -->
+              <div class="forecast-section">
+                  <h2 class="text-2xl font-semibold mb-4">Weather Forecast for the Week</h2>
+                  <div id="weeklyForecast" class="grid gap-4 md:grid-cols-3">
+                      <p>Loading weekly forecast...</p>
+                  </div>
+              </div>
+          </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="text-center py-6">
+          <p>&copy; 2025 ADSS - Agrometeorological Decision Support System. All rights reserved.</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- JavaScript to Hide Loader and Fetch Weather Data -->
+  <script>
+      window.addEventListener('load', function() {
+          document.querySelector('.loader_bg').style.display = 'none';
+
+          // Fetch Current Weather Data
+          fetch('https://api.weatherbit.io/v2.0/current?city=Harare&key=YOUR_API_KEY')
+              .then(response => response.json())
+              .then(data => {
+                  const weather = data.data[0];
+                  const currentWeather = `
+                      <p>City: ${weather.city_name}</p>
+                      <p>Temperature: ${weather.temp}°C</p>
+                      <p>Weather: ${weather.weather.description}</p>
+                  `;
+                  document.getElementById('weatherData').innerHTML = currentWeather;
+              })
+              .catch(error => {
+                  document.getElementById('weatherData').innerHTML = `<p>Error fetching weather data: ${error.message}</p>`;
+              });
+
+          // Fetch Weekly Weather Forecast Data
+          fetch('https://api.weatherbit.io/v2.0/forecast/daily?city=Harare&key=YOUR_API_KEY')
+              .then(response => response.json())
+              .then(data => {
+                  const forecastData = data.data.slice(0, 7); // Get forecast for the next 7 days
+                  let forecastHtml = '';
+                  forecastData.forEach(day => {
+                      forecastHtml += `
+                          <div class="forecast-card bg-white bg-opacity-10 p-4 rounded shadow">
+                              <p><strong>${new Date(day.datetime).toLocaleDateString()}</strong></p>
+                              <p>Temp: ${day.temp_max}°C / ${day.temp_min}°C</p>
+                              <p>Weather: ${day.weather.description}</p>
+                          </div>
+                      `;
+                  });
+                  document.getElementById('weeklyForecast').innerHTML = forecastHtml;
+              })
+              .catch(error => {
+                  document.getElementById('weeklyForecast').innerHTML = `<p>Error fetching forecast data: ${error.message}</p>`;
+              });
+      });
+  </script>
+
+</body>
+</html>

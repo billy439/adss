@@ -1,0 +1,231 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background: url('images/pexels-kindelmedia-8566437.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #1f2997;
+  }
+  
+  /* Header */
+  header a {
+    text-decoration: none;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Logo Size */
+  .h-8 {
+    height: 2rem;
+  }
+  
+  /* Banner Section */
+  .banner-section {
+    background: url('images/pexels-kindelmedia-8566437.jpg') no-repeat center center fixed; /* Background image for banner */
+    background-size: cover;
+    position: relative;
+    color: white;
+    height: 100vh; /* Full screen height */
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for banner */
+    z-index: 1;
+  }
+  
+  .banner-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-text {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Utility Classes */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Added padding to avoid container sticking to edges */
+    position: relative;
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .text-gray-600 {
+    color: #4b5563;
+  }
+  
+  .text-gray-800 {
+    color: #1f2937;
+  }
+  
+  .text-gray-200 {
+    color: #e5e7eb;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-4xl {
+    font-size: 2.25rem;
+  }
+  
+  .md\:text-5xl {
+    font-size: 3rem;
+  }
+  
+  .font-bold {
+    font-weight: 700;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mb-12 {
+    margin-bottom: 3rem;
+  }
+  
+  /* Flex and Grid */
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .space-x-6 > * + * {
+    margin-left: 1.5rem;
+  }
+  
+  /* Chat Styles */
+  .chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+  
+  .chat-box {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.05); /* glass effect */
+    color: #fff;
+  }
+  
+  .chat-message {
+    margin-bottom: 1rem;
+  }
+  
+  .chat-message.user {
+    text-align: right;
+    color: #10b981; /* Tailwind green-500 */
+    font-weight: bold;
+  }
+  
+  .chat-message.bot {
+    text-align: left;
+    color: #f9fafb;
+  }
+  
+  .chat-input {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .chat-input button {
+    background-color: #047857;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .chat-input button:hover {
+    background-color: #065f46;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #047857;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  footer a {
+    color: #e5e7eb;
+    text-decoration: underline;
+  }
+  
+  footer a:hover {
+    text-decoration: none;
+  }
+  

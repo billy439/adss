@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Pest & Disease Alerts | ADSS</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="pest and disease alerts.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+</head>
+
+<body class="main-layout pest-disease-alerts-page">
+
+    <!-- Loader -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="Loading..." /></div>
+    </div>
+
+
+      <!-- Header -->
+      <header class="bg-transparent text-white">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+          
+          <!-- Updated Logo Section -->
+          <div class="logo logo-large">
+            <img src="images/logo bv.png" alt="ADSS Logo" />
+          </div>
+
+          <!-- Navigation -->
+          <nav class="navigation navbar navbar-dark">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="homepage.html" class="nav-link hover:text-gray-200">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="features.html" class="nav-link hover:text-gray-200">Features</a>
+              </li>
+              <li class="nav-item active">
+                <a href="pest and disease alerts.html" class="nav-link hover:text-gray-200">Pest & Disease Alerts</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link hover:text-gray-200">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+    <!-- Main Content -->
+    <main class="mt-5">
+        <div class="container">
+            <h1 class="text-center mb-4">Pest & Disease Alerts</h1>
+            <p class="text-center mb-5">AI-driven alerts for potential pest outbreaks and diseases, enabling timely prevention and treatment.</p>
+
+            <!-- Alert Section -->
+            <div class="alert-section mb-5">
+                <h2 class="mb-3">Recent Alerts</h2>
+                <div id="alerts" class="alert-list">
+                    <!-- AI-driven alerts will be populated here dynamically -->
+                    <p>Loading alerts...</p>
+                </div>
+            </div>
+
+            <!-- Report Form -->
+            <div class="report-section mb-5">
+                <h2 class="mb-3">Report New Pest or Disease Outbreak</h2>
+                <form id="report-form">
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="Enter location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pest-disease-name">Pest/Disease Name</label>
+                        <input type="text" class="form-control" id="pest-disease-name" placeholder="Enter pest or disease name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="symptoms">Symptoms</label>
+                        <textarea class="form-control" id="symptoms" rows="4" placeholder="Describe symptoms or signs" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Report</button>
+                </form>
+            </div>
+
+            <!-- Common Pests and Diseases Section -->
+            <div class="disease-section mb-5">
+                <h2 class="mb-4">Common Pests and Diseases in Zimbabwe</h2>
+
+                    <!-- 🪴 Plants -->
+<section>
+    <h3>🌾 Plants</h3>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Pest/Disease</th>
+          <th>Symptoms</th>
+          <th>Prevention</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>African Armyworm</td><td>Leaf damage, webbing</td><td>Chemical control, natural predators</td></tr>
+        <tr><td>Fall Armyworm</td><td>Leaf damage, feeding on maize</td><td>Early spraying, biological control</td></tr>
+        <tr><td>Maize Streak Virus</td><td>Streaks on leaves, stunted growth</td><td>Resistant varieties, crop rotation</td></tr>
+        <tr><td>Striga (Witchweed)</td><td>Yellowing leaves, reduced growth</td><td>Crop rotation, herbicide use</td></tr>
+        <tr><td>Cotton Stainer Bug</td><td>Brown discoloration on cotton</td><td>Regular pesticide spraying</td></tr>
+        <tr><td>Whitefly</td><td>Yellowing of leaves, sooty mold</td><td>Insecticides, natural predators</td></tr>
+        <tr><td>Fruit Fly</td><td>Rotten fruits, holes in fruit</td><td>Trap monitoring, chemical control</td></tr>
+      </tbody>
+    </table>
+  </section>
+  
+  <!-- 🐐 Goats -->
+  <section>
+    <h3>🐐 Goats</h3>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Disease</th>
+          <th>Symptoms</th>
+          <th>Prevention</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>PPR</td><td>Fever, diarrhea, mouth sores</td><td>Vaccination, quarantine new animals</td></tr>
+        <tr><td>CCPP (Pneumonia)</td><td>Nasal discharge, coughing</td><td>Vaccination, reduce crowding</td></tr>
+        <tr><td>Internal Parasites</td><td>Weight loss, anemia</td><td>Deworming, rotational grazing</td></tr>
+        <tr><td>Ectoparasites</td><td>Itching, scabs</td><td>Dip/spray regularly, clean bedding</td></tr>
+      </tbody>
+    </table>
+  </section>
+  
+  <!-- 🐔 Chickens -->
+  <section>
+    <h3>🐔 Chickens</h3>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Disease</th>
+          <th>Symptoms</th>
+          <th>Prevention</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Newcastle Disease</td><td>Twisted necks, green diarrhea, paralysis</td><td>Vaccination, hygiene, biosecurity</td></tr>
+        <tr><td>Infectious Bursal Disease</td><td>Ruffled feathers, trembling</td><td>Early vaccination, disinfection</td></tr>
+        <tr><td>Fowl Pox</td><td>Wart-like nodules, lesions in mouth</td><td>Vaccinate, mosquito control</td></tr>
+        <tr><td>Coccidiosis</td><td>Bloody droppings, poor growth</td><td>Use coccidiostats, dry housing</td></tr>
+      </tbody>
+    </table>
+  </section>
+  
+  <!-- 🐖 Pigs -->
+  <section>
+    <h3>🐖 Pigs</h3>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Disease</th>
+          <th>Symptoms</th>
+          <th>Prevention</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>African Swine Fever</td><td>Sudden death, fever</td><td>Strict biosecurity, no swill feeding</td></tr>
+        <tr><td>Swine Erysipelas</td><td>Diamond skin lesions</td><td>Vaccinate, good sanitation</td></tr>
+        <tr><td>Worm Infestations</td><td>Diarrhea, poor growth</td><td>Regular deworming</td></tr>
+        <tr><td>Mange</td><td>Scratching, thickened skin</td><td>Ivermectin treatment, clean housing</td></tr>
+      </tbody>
+    </table>
+  </section>
+  
+  <!-- 🐄 Cattle -->
+  <section>
+    <h3>🐄 Cattle</h3>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Disease</th>
+          <th>Symptoms</th>
+          <th>Prevention</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Tick-borne Diseases</td><td>Anemia, fever</td><td>Use tick repellents, vaccination</td></tr>
+        <tr><td>Foot and Mouth Disease</td><td>Lameness, fever, blisters</td><td>Vaccination, quarantine, biosecurity</td></tr>
+        <tr><td>Trypanosomiasis</td><td>Lethargy, weight loss, swollen lymph nodes</td><td>Use insecticides, grazing management</td></tr>
+      </tbody>
+    </table>
+  </section>
+  
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <p>&copy; 2025 Agrometeorological DSS. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Simulate fetching pest and disease alerts
+        window.addEventListener('load', function () {
+            document.querySelector('.loader_bg').style.display = 'none';
+
+            fetch('https://api.example.com/get-pest-disease-alerts') // Replace with your actual API
+                .then(response => response.json())
+                .then(data => {
+                    const alerts = data.alerts;
+                    const alertList = document.getElementById('alerts');
+                    alertList.innerHTML = '';
+
+                    alerts.forEach(alert => {
+                        const alertItem = document.createElement('div');
+                        alertItem.classList.add('alert-item');
+                        alertItem.innerHTML = `
+                            <h4>${alert.pest_disease_name}</h4>
+                            <p><strong>Location:</strong> ${alert.location}</p>
+                            <p><strong>Symptoms:</strong> ${alert.symptoms}</p>
+                            <p><strong>Date:</strong> ${alert.date}</p>
+                            <hr>
+                        `;
+                        alertList.appendChild(alertItem);
+                    });
+                })
+                .catch(error => {
+                    const alertList = document.getElementById('alerts');
+                    alertList.innerHTML = `<p>Error fetching alerts: ${error.message}</p>`;
+                });
+
+            document.getElementById('report-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const location = document.getElementById('location').value;
+                const pestDiseaseName = document.getElementById('pest-disease-name').value;
+                const symptoms = document.getElementById('symptoms').value;
+
+                console.log(`Reported Data: ${location}, ${pestDiseaseName}, ${symptoms}`);
+                document.getElementById('report-form').reset();
+
+                alert('Report Submitted. Thank you!');
+            });
+        });
+    </script>
+
+</body>
+</html>
