@@ -9,7 +9,7 @@
 .banner-bg {
     position: relative;
     min-height: 100vh;
-    background-image: url('images/meadow-5648849_1280.JPG'); /* Replace with your actual banner path */
+    background-image: url('images/meadow-5648849_1280.jpg'); /* Replace with your actual banner path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

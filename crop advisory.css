@@ -14,7 +14,7 @@ body {
 
 /* === Banner Background with Overlay === */
 .banner-bg {
-  background: url('images/pexels-pixabay-255469.JPG') center center/cover no-repeat;
+  background: url('images/pexels-pixabay-255469.jpg') center center/cover no-repeat;
   position: relative;
   padding: 80px 20px;
   color: white;
