@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- links -->
+    <link rel="icon" type="png" href="img/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Title -->
+    <title>Weather App</title>
+    <style>
+      body {
+        background: url("img/pexels-n-voitkevich-5712871.jpg") no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding-bottom: 100px;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.6); /* Light overlay */
+        z-index: -1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- nav section -->
+    <nav>
+      <ul>
+        <li>
+          <a class="active" href="weather forecast.html "
+            ><i class="fa-solid fa-location-arrow"></i
+          ></a>
+        </li>
+        <li>
+          <a href="search.html"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+        </li>
+        <li>
+          <a href="world.html"><i class="fa-solid fa-earth-americas"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- city name -->
+    <div class="city-name">
+      <i class="fa-solid fa-map-pin"></i>
+      <h1 id="city-name">Chinhoyi</h1>
+    </div>
+
+    <!-- weather icon -->
+    <div class="weather-icon-css">
+      <img class="weather-icon" src="img/sun.png" />
+    </div>
+
+    <!-- weather details -->
+    <div class="weather-description">
+      <div class="show-metric" id="metric">0°</div>
+      <div class="weather-details">
+        <div class="weather-main" id="weather-main">Sunny</div>
+        <div class="h-f">
+          <div class="show-humidity">H: <span id="humidity">60</span></div>
+          ||
+          <div class="show-humidity">
+            F: <span id="feels-like">60</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Today forecast -->
+    <div class="forcasts-box">
+      <div class="today-forecast">
+        <h4>TODAY</h4>
+        <div class="weather-icon-today">
+          <img class="weather-icons" src="img/sun.png" />
+        </div>
+        <div class="temp-today">
+          <span id="temp-min-today">50°</span><span>/ </span
+          ><span id="temp-max-today">55°</span>
+        </div>
+        <div class="weather-main-today" id="weather-main">Sunny</div>
+      </div>
+
+      <!-- Forecast -->
+      <div class="forecast">
+        <h5>7-DAY FORECAST</h5>
+        <div id="forecast-box"></div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const showForecastBtn = document.getElementById("show-forecast-btn");
+        const forecastBox = document.getElementById("forecast-box");
+
+        showForecastBtn.addEventListener("click", function () {
+          fetchWeatherData()
+            .then((data) => {
+              displayForecast(data.daily.slice(0, 7));
+              forecastBox.style.display = "block";
+            })
+            .catch((error) => {
+              console.error("Error fetching weather data:", error);
+              forecastBox.innerHTML = "<p>Failed to load weather forecast.</p>";
+              forecastBox.style.display = "block";
+            });
+        });
+
+        async function fetchWeatherData() {
+          const latitude = -17.37;
+          const longitude = 30.19;
+          const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timezone=Africa%2FHarare&forecast_days=7`;
+
+          const response = await fetch(apiUrl);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        }
+
+        function displayForecast(forecastDays) {
+          forecastBox.innerHTML = "";
+          forecastDays.forEach((day, index) => {
+            const date = new Date();
+            date.setDate(date.getDate() + index);
+            const dayDiv = document.createElement("div");
+            dayDiv.classList.add("day-forecast");
+            dayDiv.innerHTML = `
+              <p><strong>Date:</strong> ${date.toLocaleDateString()}</p>
+              <p><strong>Max Temp:</strong> ${day.temperature_2m_max}°C</p>
+              <p><strong>Min Temp:</strong> ${day.temperature_2m_min}°C</p>
+              <p><strong>Precipitation:</strong> ${day.precipitation_sum} mm</p>
+            `;
+            forecastBox.appendChild(dayDiv);
+          });
+        }
+      });
+    </script>
+
+    <script>
+      (function()
+      {if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+        window.chatbase=new Proxy(window.chatbase,{get(target,prop){
+          if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}
+          const onLoad=function(){const script=document.createElement("script");
+          script.src="https://www.chatbase.co/embed.min.js";
+          script.id="-EP_EQoiONNzBlIyGpYye";script.domain="www.chatbase.co";
+          document.body.appendChild(script)};
+          if(document.readyState==="complete"){onLoad()}
+          else{window.addEventListener("load",onLoad)}})();
+      </script>
+    
+
+    <!-- script -->
+    <script src="main.js"></script>
+  </body>
+</html>

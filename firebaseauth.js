@@ -3,10 +3,7 @@
  import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"
  
- //YOUR COPIED FIREBASE PART SHOULD BE HERE
- //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
-  // Import the functions you need from the SDKs you need
-  // https://firebase.google.com/docs/web/setup#available-libraries
+
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
@@ -84,6 +81,10 @@
         const user=userCredential.user;
         localStorage.setItem('loggedInUserId', user.uid);
         window.location.href='features.html';
+        window.location.href='features.html';
+        window.location.href='features.html';
+        window.location.href='features.html';
+
     })
     .catch((error)=>{
         const errorCode=error.code;

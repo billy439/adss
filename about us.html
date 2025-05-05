@@ -1,107 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About Us | ADSS</title>
-    <link rel="stylesheet" href="about us.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | ADSS</title>
+  <link rel="stylesheet" href="about us.css" />
 </head>
-<body class="banner-background">
+<body>
+  <!-- Banner Background -->
+  <div class="banner-bg">
+    <!-- Overlay -->
+    <div class="overlay"></div>
 
-    
+    <!-- Page Content -->
+    <div class="page-wrapper">
       <!-- Header -->
-      <header class="bg-transparent text-white">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          
-          <!-- Updated Logo Section -->
-          <div class="logo_section">
+      <header>
+        <div class="logo_section">
+          <a href="#" class="logo">
             <img src="images/logo bv.png" alt="ADSS Logo" />
-          </div>
-          
-          <!-- Navigation -->
-          <nav class="navigation navbar navbar-dark">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a href="homepage.html" class="nav-link hover:text-gray-200">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="features.html" class="nav-link hover:text-gray-200">Features</a>
-              </li>
-              <li class="nav-item">
-                <a href="ai-assistant.html" class="nav-link hover:text-gray-200">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a href="contact.html" class="nav-link hover:text-gray-200">Contact</a>
-              </li>
-            </ul>
-          </nav>
+          </a>
         </div>
-      </header>
-      
 
-    <div class="overlay">
-        <header class="about-header">
+        <!-- Navigation -->
+        <nav>
+          <a href="homepage.html">Home</a>
+          <div class="group">
+            <button>Features ▼</button>
+            <div>
+              <a href="#" onclick="checkSignIn(event)">Weather Forecast</a>
+              <a href="#" onclick="checkSignIn(event)">Crop Advisory</a>
+              <a href="#" onclick="checkSignIn(event)">Pest & Disease Alerts</a>
+            </div>
+          </div>
+          <a href="about us.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <div class="container">
+          <div class="about-header text-center">
             <h1>About Us</h1>
             <p>Empowering Farmers Through Science & Technology</p>
-        </header>
+          </div>
 
-        <div class="container">
-            <section class="vision-section">
-                <h2>Our Vision</h2>
-                <p>
-                    The Agrometeorological Decision Support System (ADSS) is dedicated to transforming Zimbabwe's agriculture
-                    by bridging the gap between science, data, and daily farming practices. We aim to improve resilience,
-                    boost productivity, and support smart decision-making in agriculture using real-time weather,
-                    climate, soil, and pest data.
-                </p>
-            </section>
+          <!-- Vision Section -->
+          <section class="vision-section">
+            <h2>Our Vision</h2>
+            <p>
+              The Agrometeorological Decision Support System (ADSS) is committed to transforming Zimbabwe's agriculture by bridging the gap between science, data, and daily farming practices. We aim to improve resilience, boost productivity, and support smart decision-making in agriculture using real-time weather, climate, soil, and pest data.
+            </p>
+          </section>
 
-            <section class="mission-box">
-                <h2>Our Mission</h2>
-                <p>
-                    To deliver actionable, localized guidance to Zimbabwean farmers through an intelligent platform that
-                    integrates meteorological insights, agricultural expertise, and digital technology for improved
-                    crop and livestock productivity.
-                </p>
-            </section>
+          <!-- Mission Section -->
+          <section class="mission-box">
+            <h2>Our Mission</h2>
+            <p>
+              To deliver actionable, localized guidance to Zimbabwean farmers through an intelligent platform that integrates meteorological insights, agricultural expertise, and digital technology for improved crop and livestock productivity.
+            </p>
+          </section>
 
-            <section class="offerings-section">
-                <h2>What We Offer</h2>
-                <ul>
-                    <li>🌦 Real-time regional rainfall and temperature updates</li>
-                    <li>🐛 Pest and disease alerts with prevention tips</li>
-                    <li>🌱 Soil and fertilizer guidance by crop and region</li>
-                    <li>📆 Crop calendars tailored to seasonal changes</li>
-                    <li>🤖 Smart AI assistant to answer common farming questions</li>
-                </ul>
-            </section>
+          <!-- Offerings Section -->
+          <section class="offerings-section">
+            <h2>What We Offer</h2>
+            <ul>
+              <li>🌦 Real-time regional rainfall and temperature updates</li>
+              <li>🐛 Pest and disease alerts with prevention tips</li>
+              <li>🌱 Soil and fertilizer guidance by crop and region</li>
+              <li>📆 Crop calendars tailored to seasonal changes</li>
+              <li>🤖 Smart AI assistant to answer common farming questions</li>
+            </ul>
+          </section>
 
-            <section class="team-section">
-                <h2>Meet the Team</h2>
-
-                <div class="team-member">
-                    <img src="images/tes2.png" alt="Kyle THE BV">
-                    <div>
-                        <strong>Kyle THE BV</strong><br>
-                        <em>Project Lead & Meteorologist</em><br>
-                        Passionate about connecting climate science with agricultural decision-making.
-                    </div>
+          <!-- Team Section -->
+          <section class="team-section">
+            <h2>Meet the Team</h2>
+            <div class="team-container">
+              <div class="team-member">
+                <img src="images/tes2.png" alt="Kyle THE BV" />
+                <div>
+                  <strong>Kyle THE BV</strong><br />
+                  <em>Project Lead & Meteorologist</em><br />
+                  Passionate about connecting climate science with agricultural decision-making.
                 </div>
+              </div>
 
-                <div class="team-member">
-                    <img src="your-image-path.jpg" alt="Faith Chirwa">
-                    <div>
-                        <strong>OphieKID</strong><br>
-                        <em>Data Analyst</em><br>
-                        Specializes in crop-weather analytics and predictive insights for farmers.
-                    </div>
+              <div class="team-member">
+                <img src="images/oppah.jpg" alt="Oppah" />
+                <div>
+                  <strong>Oppah</strong><br />
+                  <em>Data Scientist</em><br />
+                  Specializing in weather pattern analysis and predictive models for crop growth.
                 </div>
-            </section>
+              </div>
+
+              <div class="team-member">
+                <img src="images/ophie.jpg" alt="OphieKID" />
+                <div>
+                  <strong>OphieKID</strong><br />
+                  <em>Data Analyst</em><br />
+                  Specializes in crop-weather analytics and predictive insights for farmers.
+                </div>
+              </div>
+
+              <div class="team-member">
+                <img src="images/tatenda.jpg" alt="Tatenda" />
+                <div>
+                  <strong>Tatenda</strong><br />
+                  <em>Software Developer</em><br />
+                  Expert in full-stack web development, ensuring a seamless user experience for ADSS.
+                </div>
+              </div>
+
+              <div class="team-member">
+                <img src="images/talent.jpg" alt="Talent" />
+                <div>
+                  <strong>Talent</strong><br />
+                  <em>Marketing Specialist</em><br />
+                  Focused on bringing ADSS to farmers across Zimbabwe through strategic marketing.
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <footer class="about-footer">
-            &copy; 2025 ADSS Zimbabwe. All rights reserved.
+        <!-- Footer -->
+        <footer class="about-footer text-center">
+          &copy; 2025 ADSS Zimbabwe. All rights reserved.
         </footer>
-    </div>
+      </main>
+    </div> <!-- End page-wrapper -->
+  </div> <!-- End banner-bg -->
 
+  <!-- Sign-In Check Script -->
+  <script>
+    let isSignedIn = false;
+    function checkSignIn(event) {
+      if (!isSignedIn) {
+        event.preventDefault();
+        window.location.href = 'signup.html';
+      }
+    }
+  </script>
 </body>
 </html>

@@ -1,88 +1,207 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
-}
-.banner{
+  }
+  
+  /* Global body styling */
+  body {
+    color: rgb(14, 212, 14);
+    background-color: #000; /* optional for contrast with video */
+  }
+  
+  /* Banner Section */
+  .banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
     background-position: center;
-    background-size: center;
-}
-.navbar{
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Embedded background video */
+  .banner video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Navbar (optional) */
+  .navbar {
     width: 90%;
     padding: 30px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.logo{
-    width: 15%;
-    margin-top:-10;
+  }
+  
+  /* Logo styling */
+  .logo-container {
+    position: absolute;
+    top: 20px;
+    left: 33%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    z-index: 10;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    width: 20%; /* 2x size */
+    margin-top: -10px;
     cursor: pointer;
-    background-color:transparent;
-}
-.navbar ul li{
+    background-color: transparent;
+  }
+  
+  .site-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(34, 205, 34);
+    white-space: nowrap;
+  }
+  
+  /* Navigation list */
+  .navbar ul li {
     list-style: none;
     display: inline-block;
     margin: 20px;
-}
-.navbar ul li a{
+  }
+  
+  /* Navigation links */
+  .navbar ul li a {
     text-decoration: none;
     text-transform: uppercase;
-    color:rgb(20, 158, 0.918);
+    color: rgb(20, 158, 0.918);
     font-weight: 600;
     padding: 15px;
-}
-li a:hover{
+    transition: all 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
     background: rgb(20, 158, 0.918);
-    transition: 0.6s;
-}
-.navbar a:hover{
-    color:#ffffff;
-}
-.content{
+    color: #fff;
+  }
+  
+  /* Centered content */
+  .content {
     width: 100%;
     position: absolute;
-    color: rgba(20, 158, 7, 0.918);
-    top: 45%;
+    top: 60%;
     transform: translateY(-50%);
     text-align: center;
-    letter-spacing: 0%;
-}
-.content h1{
-    margin-top: 10%;
-    font-size: 90px;
+    letter-spacing: 0;
+    padding: 0 20px;
+  }
+  
+  /* Main heading */
+  .content h1 {
+    font-size: 180px;
     font-weight: 800;
-    letter-spacing: normal;
-
-}
-button{
+    margin-top: 60px; /* Added to move it down */
+    margin-bottom: 50px;
+  }
+  
+  /* Button styling */
+  button {
     width: 300px;
     padding: 15px;
     margin: 50px 10px;
     text-align: center;
     border-radius: 25px;
     color: rgb(20, 158, 0.918);
-    border: 100px;
-    border-spacing: 150px;
+    background: transparent;
+    border: 2px solid rgb(20, 158, 0.918);
     font-size: 20px;
     cursor: pointer;
     font-weight: 600;
-}
-button:hover{
+    transition: all 0.5s ease;
+  }
+  
+  button:hover {
     background: rgb(20, 158, 0.918);
-    transition: 0.5s;
-}
-button:hover{
     color: white;
-}
-.banner video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
+  }
+  
+  /* ============================= */
+  /* Responsive adjustments below */
+  /* ============================= */
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .content h1 {
+      font-size: 120px;
+    }
+  
+    .logo {
+      width: 30%;
+    }
+  
+    .site-name {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Medium screens */
+  @media (max-width: 768px) {
+    .logo-container {
+      flex-direction: column;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .logo {
+      width: 40%;
+      margin-top: 0;
+    }
+  
+    .site-name {
+      font-size: 1.2rem;
+      white-space: normal;
+    }
+  
+    .content h1 {
+      font-size: 60px;
+    }
+  
+    button {
+      width: 80%;
+      font-size: 18px;
+    }
+  
+    .navbar ul li {
+      margin: 10px;
+    }
+  }
+  
+  /* Small screens / Mobile phones */
+  @media (max-width: 480px) {
+    .logo {
+      width: 50%;
+    }
+  
+    .site-name {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .content h1 {
+      font-size: 36px;
+    }
+  
+    button {
+      width: 90%;
+      font-size: 16px;
+    }
+  }
+  

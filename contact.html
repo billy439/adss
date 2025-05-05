@@ -5,106 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us | ADSS</title>
   <link rel="stylesheet" href="contact.css" />
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f3f4f6;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .form-section {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #047857;
-      text-align: center;
-    }
-
-    p {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #4b5563;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    input, textarea {
-      padding: 1rem;
-      border: 1px solid #d1d5db;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-    }
-
-    button {
-      background-color: #047857;
-      color: white;
-      padding: 1rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #065f46;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="bg-green-700 text-white py-4">
-    <div class="container flex items-center justify-between">
-      <a href="index.html" class="flex items-center">
-        <img src="logo.png" alt="ADSS Logo" class="h-8 mr-2" />
-        <span class="text-xl font-bold">ADSS</span>
-      </a>
-      <nav class="space-x-6">
-        <a href="homepage.html" class="text-white">Home</a>
-        <a href="features.html" class="text-white">Features</a>
-        <a href="ai-assistant.html" class="text-white">AI Assistant</a>
-        <a href="contact.html" class="text-white font-semibold underline">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="page-wrapper">
 
-  <!-- Contact Form -->
-  <section class="container py-12">
-    <div class="form-section">
-      <h1>Contact Us</h1>
-      <p>We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.</p>
-      <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <!-- Banner Background -->
+    <div class="banner-bg">
 
-  <!-- Footer -->
-  <footer class="bg-green-700 text-white py-8 text-center">
-    <p>&copy; 2025 ADSS - Agrometeorological Decision Support System. All rights reserved.</p>
-    <p><a href="contact.html">Contact Us</a></p>
-  </footer>
+      <!-- Overlay -->
+      <div class="overlay"></div>
+
+      <!-- Header -->
+      <header>
+        <div class="logo_section">
+          <a href="#" class="logo">
+            <img src="images/logo bv.png" alt="ADSS Logo" />
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <a href="homepage.html">Home</a>
+
+          <div class="group">
+            <button>Features ▼</button>
+            <div>
+              <a href="#" onclick="checkSignIn(event)">Weather Forecast</a>
+              <a href="#" onclick="checkSignIn(event)">Crop Advisory</a>
+              <a href="#" onclick="checkSignIn(event)">Pest & Disease Alerts</a>
+            </div>
+          </div>
+
+          <a href="about us.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <section class="container py-12 relative z-10">
+          <div class="form-section">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.</p>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact">
+              <input type="hidden" name="access_key" value="f5a90f76-163e-4379-a8d6-c9d662b39d7d">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 ADSS - Agrometeorological Decision Support System. All rights reserved.</p>
+      </footer>
+    </div> <!-- End banner-bg -->
+
+  </div> <!-- End page-wrapper -->
+
+  <!-- Sign-In Check Script -->
+  <script>
+    let isSignedIn = false;
+    function checkSignIn(event) {
+      if (!isSignedIn) {
+        event.preventDefault();
+        window.location.href = 'signup.html';
+      }
+    }
+  </script>
 
 </body>
 </html>
