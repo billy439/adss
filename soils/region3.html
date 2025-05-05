@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Region Three | ADSS</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="pagination">
+        <p>ADSS > Soil Profiles</p>
+    </div>
+    <!-- region section -->
+    <section class="product-container">
+        <!-- left side -->
+        <div class="img-card">
+            <img src="img/fields-500303_640.jpg" alt="Region 1 Overview" id="featured-image">
+            <!-- small img -->
+            <div class="small-Card">
+                <img src="img/fields-500303_640.jpg" alt="Climate Map" class="small-Img">
+                <img src="img/agriculture-4210651_640.jpg" alt="Crops in Region 1" class="small-Img">
+                <img src="img/watermelon-551235_640.jpg" alt="Farming Practice" class="small-Img">
+                <img src="img/earth-312794_640.jpg" alt="Landscape" class="small-Img">
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="product-info">
+            <h3>Farming Region Three - Transition Zone</h3>
+            <h5>Soil characteristics</h5>
+            <p>Region Three lies between the high rainfall zones of Regions 1 and 2 and the drier Regions 4 and 5. It covers parts of the Midlands, Masvingo, and south-eastern Zimbabwe. This region experiences moderate rainfall and is suitable for both crop and livestock farming.</p>
+            <p>Here's a bit more detail about these soil types in Region Three:</p>
+                <p><b>Clay loams and sandy clay loams </b> :</p> These soils are moderately fertile and retain moisture better than sandy soils, supporting both crop production and pastures.
+                 <p><b>Vertisols and Luvisols</b>:</p> These are typical in this region. Vertisols are dark, clay-rich soils that expand and contract with moisture, while Luvisols are moderately leached, fertile soils suited to semi-intensive farming.</p>
+               
+                 <div class="sizes">
+                  <p>Soil types in Region 3 of Zimbabwe:</p>
+                  <select name="soils" id="soil-select" class="size-option">
+                    <option value="" disabled selected>Select Soil Type</option>
+                    <option value="sandy">Sandy Soil</option>
+                    <option value="clay">Clay Soil</option>
+                    <option value="loamy">Loamy Soil</option>
+                    <option value="kalahari">Kalahari Sands</option>
+                    <option value="soil-challenges">Soil Management Challenges</option>
+                  </select>
+                  <div id="answer-box" style="margin-top: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+                </div>
+                
+                <script>
+                  const soilSelect = document.getElementById("soil-select");
+                  const answerBox = document.getElementById("answer-box");
+                
+                  const answers = {
+                    "sandy": "Sandy soils in Region 3 are generally low in nutrients and have poor water-holding capacity. They are easy to till but require consistent application of organic matter and fertilizers for crops like millet and sorghum.",
+                    "clay": "Clay soils in Region 3 are fertile but can become compacted and waterlogged, especially during heavy rains. These soils benefit from good drainage systems and are suitable for maize, cotton, and legumes.",
+                    "loamy": "Loamy soils, though less common, are ideal due to their balanced texture. They support various crops like groundnuts and maize when managed with proper fertilization and erosion control.",
+                    "kalahari": "Kalahari sands, found in parts of Region 3, are deep, loose, and low in fertility. Farmers often grow drought-tolerant crops like sorghum and use conservation agriculture to improve productivity.",
+                    "soil-challenges": "Region 3 faces soil challenges such as erosion due to seasonal rains, declining organic matter, and low fertility in sandy soils. Soil conservation, rotation, and compost use are crucial for sustainability."
+                  };
+                
+                  soilSelect.addEventListener("change", function () {
+                    const selectedValue = this.value;
+                    if (answers.hasOwnProperty(selectedValue)) {
+                      answerBox.textContent = answers[selectedValue];
+                    } else {
+                      answerBox.textContent = "";
+                    }
+                  });
+                </script>
+                
+      <script>
+        (function()
+        {if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{
+          if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+          window.chatbase=new Proxy(window.chatbase,{get(target,prop){
+            if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}
+            const onLoad=function(){const script=document.createElement("script");
+            script.src="https://www.chatbase.co/embed.min.js";
+            script.id="-EP_EQoiONNzBlIyGpYye";script.domain="www.chatbase.co";
+            document.body.appendChild(script)};
+            if(document.readyState==="complete"){onLoad()}
+            else{window.addEventListener("load",onLoad)}})();
+        </script>
+      
+
+    <!-- script tags -->
+    <script src="js/cart.js "></script>
+</body>
+</html>

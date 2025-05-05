@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Region Four | ADSS</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="pagination">
+        <p>ADSS > Soil Profiles</p>
+    </div>
+    <!-- region section -->
+    <section class="product-container">
+        <!-- left side -->
+        <div class="img-card">
+            <img src="img/cow-6580913_640.jpg" alt="Region 1 Overview" id="featured-image">
+            <!-- small img -->
+            <div class="small-Card">
+                <img src="img/cow-6580913_640.jpg" alt="Climate Map" class="small-Img">
+                <img src="img/farmer-3882837_640.jpg" alt="Crops in Region 1" class="small-Img">
+                <img src="img/track-2021924_640.jpg" alt="Farming Practice" class="small-Img">
+                <img src="img/soil-5096579_640.jpg" alt="Landscape" class="small-Img">
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="product-info">
+            <h3>Farming Region Four - Semi-Arid Zone</h3>
+            <h5>Soil characteristics</h5>
+            <p>Region Four spans the low-lying parts of Masvingo, Matabeleland South, and southern Midlands. It experiences low and erratic rainfall, making it more suited to drought-tolerant crops and livestock production under semi-extensive systems.</p>
+            <p>Here's a bit more detail about these soil types in Region Four:</p>
+                <p><b>Sandy soils and sandy clay loams </b> :</p> These soils are generally light-textured, well-drained, but low in organic matter and nutrients. They require careful fertility management for sustained crop productivity.
+                 <p><b>Luvisols and Cambisols</b>:</p> Common in this region, Luvisols offer moderate fertility and are suitable for small grains, while Cambisols are younger, less developed soils that respond well to soil amendments and proper moisture conservation.</p>
+                 
+                 <div class="sizes">
+                  <p>Soil types in Region 4 of Zimbabwe:</p>
+                  <select name="soils" id="soil-select" class="size-option">
+                    <option value="" disabled selected>Select Soil Type</option>
+                    <option value="sandy">Sandy Soil</option>
+                    <option value="clay">Clay Soil</option>
+                    <option value="loamy">Loamy Soil</option>
+                    <option value="saline">Saline Soils</option>
+                    <option value="soil-challenges">Soil Management Challenges</option>
+                  </select>
+                  <div id="answer-box" style="margin-top: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+                </div>
+                
+                <script>
+                  const soilSelect = document.getElementById("soil-select");
+                  const answerBox = document.getElementById("answer-box");
+                
+                  const answers = {
+                    "sandy": "Sandy soils dominate Region 4 and are characterized by low fertility and poor water retention. They require regular organic matter additions and are mostly suitable for drought-resistant crops like sorghum and millet.",
+                    "clay": "Clay soils occur in some valleys and are prone to waterlogging and compaction. These soils can support crops such as maize and cotton with proper drainage and conservation tillage.",
+                    "loamy": "Loamy soils are limited in Region 4 but where available, they offer better nutrient balance and support crops like groundnuts, sunflower, and small grains.",
+                    "saline": "Saline soils may be found in low-lying or poorly drained areas of Region 4. These soils are challenging for agriculture and require reclamation practices such as gypsum application and leaching.",
+                    "soil-challenges": "Region 4 faces serious challenges like low rainfall, high evaporation, and soil degradation. Farmers often deal with nutrient-poor sandy soils and erosion. Techniques such as mulching, minimum tillage, and drought-tolerant crop varieties help mitigate these issues."
+                  };
+                
+                  soilSelect.addEventListener("change", function () {
+                    const selectedValue = this.value;
+                    if (answers.hasOwnProperty(selectedValue)) {
+                      answerBox.textContent = answers[selectedValue];
+                    } else {
+                      answerBox.textContent = "";
+                    }
+                  });
+                </script>
+                
+                  
+      <script>
+        (function()
+        {if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{
+          if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+          window.chatbase=new Proxy(window.chatbase,{get(target,prop){
+            if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}
+            const onLoad=function(){const script=document.createElement("script");
+            script.src="https://www.chatbase.co/embed.min.js";
+            script.id="-EP_EQoiONNzBlIyGpYye";script.domain="www.chatbase.co";
+            document.body.appendChild(script)};
+            if(document.readyState==="complete"){onLoad()}
+            else{window.addEventListener("load",onLoad)}})();
+        </script>
+      
+
+    <!-- script tags -->
+    <script src="js/cart.js "></script>
+</body>
+</html>

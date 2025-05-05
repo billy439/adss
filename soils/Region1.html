@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Region One | ADSS</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="pagination">
+        <p>ADSS > Soil Profiles</p>
+    </div>
+    <!-- region section -->
+    <section class="product-container">
+        <!-- left side -->
+        <div class="img-card">
+            <img src="img/tractor-1048402_640.jpg" alt="Region 1 Overview" id="featured-image">
+            <!-- small img -->
+            <div class="small-Card">
+                <img src="img/plants-6842786_640.jpg" alt="Climate Map" class="small-Img">
+                <img src="img/tractor-1048402_640.jpg" alt="Crops in Region 1" class="small-Img">
+                <img src="img/potato-1628500_640.jpg" alt="Farming Practice" class="small-Img">
+                <img src="img/agriculture-8030874_640.jpg" alt="Landscape" class="small-Img">
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="product-info">
+            <h3>Farming Region One - Eastern Highlands</h3>
+            <h5>Soil characteristics</h5>
+            <p>Region One covers the Eastern Highlands of Zimbabwe, including areas like Nyanga, Chimanimani, and Chipinge.This region  is characterized by red soils. These are broadly classified as Acrisols and Ferralsols under the FAO soil classification system.
+            </p>
+            <p>Here's a bit more detail about these soil types in Region 1:</p>
+                <p><b>Acrisols </b> :</p> These soils are typically acidic and have a clay-rich subsoil (argillic horizon) that exhibits low base saturation. This means they have a limited capacity to retain nutrients. They are often well-drained and can be found on sloping land.
+                 <p><b>Ferralsols</b>:</p> These are deeply weathered, strongly leached, and often reddish or yellowish due to the accumulation of iron and aluminum oxides. They have low inherent fertility and a low cation exchange capacity, meaning they don't hold onto nutrients very well.</p>
+                 
+                 <div class="sizes">
+                  <p>Soil types in Region 1 of Zimbabwe:</p>
+                  <select name="soils" id="soil-select" class="size-option">
+                    <option value="" disabled selected>Select Soil Type</option>
+                    <option value="sandy">Sandy Soil</option>
+                    <option value="clay">Clay Soil</option>
+                    <option value="loamy">Loamy Soil</option>
+                    <option value="waterlogged">Waterlogged Areas</option>
+                    <option value="soil-challenges">Soil Management Challenges</option>
+                  </select>
+                  <div id="answer-box" style="margin-top: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+                </div>
+                
+                <script>
+                  const soilSelect = document.getElementById("soil-select");
+                  const answerBox = document.getElementById("answer-box");
+                
+                  const answers = {
+                    "sandy": "Sandy soils in Region 1 are well-drained and easy to cultivate but can lose nutrients quickly due to leaching. They need frequent fertilization and organic matter to retain moisture and fertility.",
+                    "clay": "Clay soils are rich in nutrients but can become waterlogged, especially during the rainy season. Proper drainage and soil structure management are important for healthy crop growth.",
+                    "loamy": "Loamy soil is the most ideal for farming in Region 1. It has a good balance of sand, silt, and clay, offering both fertility and drainage. Crops like potatoes, tea, and vegetables thrive here.",
+                    "waterlogged": "Some low-lying areas in Region 1 may have waterlogged soils, especially after heavy rains. These areas are suitable for pasture or rice if well-managed, but require good drainage for most crops.",
+                    "soil-challenges": "Farmers in Region 1 face issues like nutrient leaching due to heavy rains, soil acidity, and erosion on steep slopes. Regular liming, mulching, and terracing can help manage these problems."
+                  };
+                
+                  soilSelect.addEventListener("change", function () {
+                    const selectedValue = this.value;
+                    if (answers.hasOwnProperty(selectedValue)) {
+                      answerBox.textContent = answers[selectedValue];
+                    } else {
+                      answerBox.textContent = "";
+                    }
+                  });
+                </script>
+                
+                  
+      <script>
+        (function()
+        {if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{
+          if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+          window.chatbase=new Proxy(window.chatbase,{get(target,prop){
+            if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}
+            const onLoad=function(){const script=document.createElement("script");
+            script.src="https://www.chatbase.co/embed.min.js";
+            script.id="-EP_EQoiONNzBlIyGpYye";script.domain="www.chatbase.co";
+            document.body.appendChild(script)};
+            if(document.readyState==="complete"){onLoad()}
+            else{window.addEventListener("load",onLoad)}})();
+        </script>
+      
+               
+
+    <!-- script tags -->
+    <script src="js/cart.js "></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Region Two | ADSS</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="pagination">
+        <p>ADSS > Soil Profiles</p>
+    </div>
+    <!-- region section -->
+    <section class="product-container">
+        <!-- left side -->
+        <div class="img-card">
+            <img src="img/plants-6842786_640.jpg" alt="Region 1 Overview" id="featured-image">
+            <!-- small img -->
+            <div class="small-Card">
+                <img src="img/earth-312794_640.jpg" alt="Climate Map" class="small-Img">
+                <img src="img/plants-6842786_640.jpg" alt="Crops in Region 1" class="small-Img">
+                <img src="img/fields-3491056_640.jpg" alt="Farming Practice" class="small-Img">
+                <img src="img/tractor-5795252_640.jpg" alt="Landscape" class="small-Img">
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="product-info">
+            <h3>Farming Region Two- Central Plateau</h3>
+            <h5>Soil characteristics</h5>
+            <p>Region Two spans much of the central plateau of Zimbabwe, including parts of Mashonaland and Midlands. It has moderate to high rainfall and relatively fertile soils, making it one of the most productive farming areas in the country</p>
+            <p>Here's a bit more detail about these soil types in Region Two:</p>
+                <p><b>Greyish brown sands and sandy loams </b> :</p> These soils are predominantly derived from granitic rocks, which underlie much of the region.
+                 <p><b>Cambisols, Luvisols, and Arenosols</b>:</p> These are the main soil classifications associated with the greyish brown sands and sandy loams.</p>
+                 
+                 <div class="sizes">
+                  <p>Soil types in Region 2 of Zimbabwe:</p>
+                  <select name="soils" id="soil-select" class="size-option">
+                    <option value="" disabled selected>Select Soil Type</option>
+                    <option value="sandy">Sandy Soil</option>
+                    <option value="clay">Clay Soil</option>
+                    <option value="loamy">Loamy Soil</option>
+                    <option value="red">Red Soils</option>
+                    <option value="soil-challenges">Soil Management Challenges</option>
+                  </select>
+                  <div id="answer-box" style="margin-top: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+                </div>
+                
+                <script>
+                  const soilSelect = document.getElementById("soil-select");
+                  const answerBox = document.getElementById("answer-box");
+                
+                  const answers = {
+                    "sandy": "Sandy soils in Region 2 are common in areas with lighter texture. These soils warm up quickly and are easy to work with, but they require regular fertilization and moisture conservation to support crops like maize and groundnuts.",
+                    "clay": "Clay soils hold nutrients well and are fertile, making them good for crops like maize and cotton. However, they can become compacted and waterlogged if not properly managed with organic matter and crop rotation.",
+                    "loamy": "Loamy soils in Region 2 are among the best for farming, providing good drainage and fertility. These soils are suitable for a variety of crops including maize, tobacco, and legumes.",
+                    "red": "Red soils, often well-drained and moderately fertile, are found in the upland parts of Region 2. They respond well to fertilizers and liming, making them productive for tobacco, soybeans, and maize.",
+                    "soil-challenges": "Region 2 faces challenges like soil nutrient depletion due to intensive cropping, erosion on sloped lands, and declining organic matter. Conservation agriculture, timely fertilization, and contour ploughing help mitigate these issues."
+                  };
+                
+                  soilSelect.addEventListener("change", function () {
+                    const selectedValue = this.value;
+                    if (answers.hasOwnProperty(selectedValue)) {
+                      answerBox.textContent = answers[selectedValue];
+                    } else {
+                      answerBox.textContent = "";
+                    }
+                  });
+                </script>
+                
+                  
+      <script>
+        (function()
+        {if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{
+          if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+          window.chatbase=new Proxy(window.chatbase,{get(target,prop){
+            if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}
+            const onLoad=function(){const script=document.createElement("script");
+            script.src="https://www.chatbase.co/embed.min.js";
+            script.id="-EP_EQoiONNzBlIyGpYye";script.domain="www.chatbase.co";
+            document.body.appendChild(script)};
+            if(document.readyState==="complete"){onLoad()}
+            else{window.addEventListener("load",onLoad)}})();
+        </script>
+      
+               
+
+    <!-- script tags -->
+    <script src="js/cart.js "></script>
+</body>
+</html>
