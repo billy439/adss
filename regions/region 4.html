@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Region Four | ADSS</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="pagination">
+        <p>ADSS >Crop Advisory</p>
+    </div>
+    <!-- region section -->
+    <section class="product-container">
+        <!-- left side -->
+        <div class="img-card">
+            <img src="img/field-1621844_640.jpg" alt="Region 1 Overview" id="featured-image">
+            <!-- small img -->
+            <div class="small-Card">
+                <img src="img/field-1621844_640.jpg" alt="Climate Map" class="small-Img">
+                <img src="img/millet-1697117_640.jpg" alt="Crops in Region 1" class="small-Img">
+                <img src="img/peanuts-2163043_640.jpg" alt="Farming Practice" class="small-Img">
+                <img src="img/sorghum-2838307_640.jpg" alt="Landscape" class="small-Img">
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="product-info">
+            <h3>Farming Region Four - Semi-Arid Areas</h3>
+            <h5>Annual Rainfall: 450mm - 650mm</h5>
+            <p>Region Four covers semi-arid areas including parts of Matabeleland, Masvingo, and the southern Midlands. Rainfall is low and erratic, with frequent droughts and poor soil fertility limiting crop production potential.</p>
+            <p>Farming in this region relies heavily on drought-resistant crops such as millet, sorghum, and cowpeas. Livestock production, especially cattle, goats, and donkeys, is a key livelihood activity. Conservation farming, mulching, and water harvesting techniques are critical for improving productivity.</p>
+
+                        
+            <div class="sizes">
+                <p>Region 4 Crop Category Guide:</p>
+                <select name="crops" id="crop-select" class="size-option">
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="Cash Crops in Region 4">Cash Crops in Region 4</option>
+                    <option value="Fruits in Region 4">Fruits in Region 4</option>
+                    <option value="Horticulture in Region 4">Horticulture in Region 4</option>
+                    <option value="Cereals & Grains in Region 4">Cereals & Grains in Region 4</option>
+                    <option value="Legumes & Pulses in Region 4">Legumes & Pulses in Region 4</option>
+                </select>
+            </div>
+            
+            <div id="crop-info" class="crop-info" style="margin-top: 20px;"></div>
+            
+            <script>
+                const cropDetails = {
+                    "Cash Crops in Region 4": "Cotton is the primary cash crop due to its drought tolerance. Limited tobacco and sesame farming are also practiced where water access is available.",
+                    "Fruits in Region 4": "Fruits like guavas, pawpaws, and drought-tolerant citrus (lemons, oranges) can be grown with supplemental irrigation. Pomegranate is also gaining popularity.",
+                    "Horticulture in Region 4": "Horticultural activities are generally small-scale and depend on irrigation. Onions, tomatoes, and butternuts are common in gardens near water sources.",
+                    "Cereals & Grains in Region 4": "Sorghum, pearl millet, and finger millet are the main grains due to their resilience to dry conditions. Maize is grown in good years or under irrigation.",
+                    "Legumes & Pulses in Region 4": "Cowpeas, groundnuts, and bambara nuts thrive in the sandy soils and low rainfall areas, offering good protein sources and soil fertility benefits."
+                };
+            
+                const selectElement = document.getElementById("crop-select");
+                const infoDiv = document.getElementById("crop-info");
+            
+                selectElement.addEventListener("change", function () {
+                    const value = this.value;
+                    infoDiv.innerHTML = `<p><strong>${value}</strong><br>${cropDetails[value]}</p>`;
+                });
+            </script>
+            
+            
+      <script>
+        (function()
+        {if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{
+          if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+          window.chatbase=new Proxy(window.chatbase,{get(target,prop){
+            if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}
+            const onLoad=function(){const script=document.createElement("script");
+            script.src="https://www.chatbase.co/embed.min.js";
+            script.id="-EP_EQoiONNzBlIyGpYye";script.domain="www.chatbase.co";
+            document.body.appendChild(script)};
+            if(document.readyState==="complete"){onLoad()}
+            else{window.addEventListener("load",onLoad)}})();
+        </script>
+      
+
+
+            <div>
+                <p>Support Services:</p>
+                <p>Extension services are available through ADSS AI ChatBot.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- script tags -->
+    <script src="js/cart.js"></script>
+</body>
+</html>

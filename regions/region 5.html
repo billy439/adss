@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Region Five | ADSS</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="pagination">
+        <p>ADSS >Crop Advisory </p>
+    </div>
+    <!-- region section -->
+    <section class="product-container">
+        <!-- left side -->
+        <div class="img-card">
+            <img src="img/irrigation-5183271_640.jpg" alt="Region 1 Overview" id="featured-image">
+            <!-- small img -->
+            <div class="small-Card">
+                <img src="img/tomatoes-6557067_640.jpg" alt="Climate Map" class="small-Img">
+                <img src="img/irrigation-5183271_640.jpg" alt="Crops in Region 1" class="small-Img">
+                <img src="img/onion-3540502_640.jpg" alt="Farming Practice" class="small-Img">
+                <img src="img/sorghum-2838307_640.jpg" alt="Landscape" class="small-Img">
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="product-info">
+            <h3>Farming Region Five - Arid and Low-Rainfall Areas</h3>
+            <h5>Annual Rainfall: Less than 450mm</h5>
+            <p>Region Five includes the hottest and driest parts of Zimbabwe, such as southern Chiredzi, Beitbridge, and parts of Matabeleland South. Rainfall is extremely low and unreliable, making crop production highly risky without irrigation.</p>
+            <p>This region is best suited for extensive livestock ranching, especially goats and indigenous cattle breeds. Agro-pastoralism and drought-tolerant forage crops are key, and investments in water harvesting, boreholes, and climate-smart farming practices are crucial for sustaining livelihoods.</p>
+
+            <div class="sizes">
+                <p>Region 5 Crop Category Guide:</p>
+                <select name="crops" id="crop-select" class="size-option">
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="Cash Crops in Region 5">Cash Crops in Region 5</option>
+                    <option value="Fruits in Region 5">Fruits in Region 5</option>
+                    <option value="Horticulture in Region 5">Horticulture in Region 5</option>
+                    <option value="Cereals & Grains in Region 5">Cereals & Grains in Region 5</option>
+                    <option value="Legumes & Pulses in Region 5">Legumes & Pulses in Region 5</option>
+                </select>
+            </div>
+            
+            <div id="crop-info" class="crop-info" style="margin-top: 20px;"></div>
+            
+            <script>
+                const cropDetails = {
+                    "Cash Crops in Region 5": "Very limited. Smallholder cotton and sesame are grown under dryland conditions. Livestock (especially cattle and goats) are more dominant for income.",
+                    "Fruits in Region 5": "Only drought-hardy fruits like baobab, marula, and occasionally pawpaw are grown. Fruit production is minimal and usually for home consumption.",
+                    "Horticulture in Region 5": "Extremely limited due to poor rainfall. Small gardens near boreholes or rivers grow onions, tomatoes, and leafy greens with drip irrigation.",
+                    "Cereals & Grains in Region 5": "Pearl millet and sorghum are the primary grains due to their drought resilience. Maize is only grown in isolated irrigated plots or during exceptionally good seasons.",
+                    "Legumes & Pulses in Region 5": "Cowpeas, groundnuts, and bambara nuts are commonly grown in sandy soils. These help supplement diets and improve soil health despite harsh conditions."
+                };
+            
+                const selectElement = document.getElementById("crop-select");
+                const infoDiv = document.getElementById("crop-info");
+            
+                selectElement.addEventListener("change", function () {
+                    const value = this.value;
+                    infoDiv.innerHTML = `<p><strong>${value}</strong><br>${cropDetails[value]}</p>`;
+                });
+            </script>
+            
+            
+      <script>
+        (function()
+        {if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{
+          if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+          window.chatbase=new Proxy(window.chatbase,{get(target,prop){
+            if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}
+            const onLoad=function(){const script=document.createElement("script");
+            script.src="https://www.chatbase.co/embed.min.js";
+            script.id="-EP_EQoiONNzBlIyGpYye";script.domain="www.chatbase.co";
+            document.body.appendChild(script)};
+            if(document.readyState==="complete"){onLoad()}
+            else{window.addEventListener("load",onLoad)}})();
+        </script>
+      
+
+            <div>
+                <p>Support Services:</p>
+                <p>Extension services are available through ADSS AI ChatBot.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- script tags -->
+    <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Region One | ADSS</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="pagination">
+        <p>ADSS >Crop Advisory</p>
+    </div>
+    <!-- region section -->
+    <section class="product-container">
+        <!-- left side -->
+        <div class="img-card">
+            <img src="img/alps-4549188_1280.jpg" alt="Region 1 Overview" id="featured-image">
+            <!-- small img -->
+            <div class="small-Card">
+                <img src="img/alps-4549188_1280.jpg" alt="Climate Map" class="small-Img">
+                <img src="img/tea-7331591_640.jpg" alt="Crops in Region 1" class="small-Img">
+                <img src="img/bananas-404536_640.jpg" alt="Farming Practice" class="small-Img">
+                <img src="img/agriculture-8030874_640.jpg" alt="Landscape" class="small-Img">
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="product-info">
+            <h3>Farming Region One - Eastern Highlands</h3>
+            <h5>Annual Rainfall: 1000mm - 2000mm</h5>
+            <p>Region One covers the Eastern Highlands of Zimbabwe, including areas like Nyanga, Chimanimani, and Chipinge. This region receives the highest rainfall in the country and has cooler temperatures, making it ideal for horticulture, tea, coffee, and deciduous fruits.</p>
+            <p>Farmers in this region benefit from abundant water sources, allowing irrigation and intensive crop production. However, the terrain is mountainous, requiring contour farming and soil conservation techniques.</p>
+            <div class="sizes">
+              <p>Region 1 Crop Category Guide:</p>
+              <select name="crops" id="crop-select" class="size-option">
+                  <option value="" disabled selected>Select a category</option>
+                  <option value="Cash Crops in Region 1">Cash Crops in Region 1</option>
+                  <option value="Fruits in Region 1">Fruits in Region 1</option>
+                  <option value="Horticulture in Region 1">Horticulture in Region 1</option>
+                  <option value="Cereals & Grains in Region 1">Cereals & Grains in Region 1</option>
+                  <option value="Legumes & Pulses in Region 1">Legumes & Pulses in Region 1</option>
+              </select>
+          </div>
+          
+          <div id="crop-info" class="crop-info" style="margin-top: 20px;"></div>
+          
+          <script>
+              const cropDetails = {
+                  "Cash Crops in Region 1": "Region 1 is ideal for high-value cash crops like tea, coffee, and tobacco. The consistent rainfall and cooler temperatures support quality production and export-grade yields.",
+                  "Fruits in Region 1": "Temperate fruits such as apples, peaches, plums, and pears thrive in Region 1 due to the required chill hours and abundant rainfall.",
+                  "Horticulture in Region 1": "Excellent conditions for growing vegetables like carrots, cabbages, tomatoes, and lettuce. The region supports year-round horticultural production, particularly in highland areas.",
+                  "Cereals & Grains in Region 1": "Maize and wheat can be grown successfully, especially in valley areas and lower slopes. However, cereal production may be secondary to cash and horticultural crops.",
+                  "Legumes & Pulses in Region 1": "Beans and soybeans perform well under managed conditions. While not the primary crop group here, legumes fit well into rotation systems and support soil health."
+              };
+          
+              const selectElement = document.getElementById("crop-select");
+              const infoDiv = document.getElementById("crop-info");
+          
+              selectElement.addEventListener("change", function () {
+                  const value = this.value;
+                  infoDiv.innerHTML = `<p><strong>${value}</strong><br>${cropDetails[value]}</p>`;
+              });
+          </script>
+          
+            <div>
+                <p>Support Services:</p>
+                <p>Extension services are available through ADSS AI ChatBot.</p>
+            </div>
+        </div>
+    </section>
+
+      <!-- Chatbase Embed -->
+  <script>
+    (function(){
+      if(!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...arguments) => {
+          if (!window.chatbase.q) { window.chatbase.q = [] }
+          window.chatbase.q.push(arguments)
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") return target.q;
+            return (...args) => target(prop, ...args)
+          }
+        })
+      }
+      const onLoad = function() {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "5uPNi6XSU5MloP3WN0mgw";
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script)
+      };
+      if (document.readyState === "complete") onLoad()
+      else window.addEventListener("load", onLoad)
+    })();
+  </script>
+
+
+    <!-- script tags -->
+    <script src="js/cart.js"></script>
+</body>
+</html>

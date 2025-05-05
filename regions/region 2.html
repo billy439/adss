@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Region Two | ADSS</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="pagination">
+        <p>ADSS >Crop Advisory</p>
+    </div>
+    <!-- region section -->
+    <section class="product-container">
+        <!-- left side -->
+        <div class="img-card">
+            <img src="img/maize-272896_640.jpg" alt="Region 1 Overview" id="featured-image">
+            <!-- small img -->
+            <div class="small-Card">
+                <img src="img/tobacco-16771_640.jpg" alt="Climate Map" class="small-Img">
+                <img src="img/maize-272896_640.jpg" alt="Crops in Region 1" class="small-Img">
+                <img src="img/onion-3540502_640.jpg" alt="Farming Practice" class="small-Img">
+                <img src="img/cotton-4649804_640.jpg" alt="Landscape" class="small-Img">
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="product-info">
+            <h3>Farming Region Two - Central Plateau</h3>
+            <h5>Annual Rainfall: 750mm - 1000mm</h5>
+            <p>Region Two spans much of the central plateau of Zimbabwe, including parts of Mashonaland and Midlands. It has moderate to high rainfall and relatively fertile soils, making it one of the most productive farming areas in the country.</p>
+            <p>This region supports a mix of commercial and small-scale farming, with successful cultivation of crops like maize, tobacco, soybeans, cotton, and groundnuts. Conservation agriculture and proper timing are key to optimizing yields in this zone.</p>
+            <div class="sizes">
+              <p>Region 2 Crop Category Guide:</p>
+              <select name="crops" id="crop-select" class="size-option">
+                  <option value="" disabled selected>Select a category</option>
+                  <option value="Cash Crops in Region 2">Cash Crops in Region 2</option>
+                  <option value="Fruits in Region 2">Fruits in Region 2</option>
+                  <option value="Horticulture in Region 2">Horticulture in Region 2</option>
+                  <option value="Cereals & Grains in Region 2">Cereals & Grains in Region 2</option>
+                  <option value="Legumes & Pulses in Region 2">Legumes & Pulses in Region 2</option>
+              </select>
+          </div>
+          
+          <div id="crop-info" class="crop-info" style="margin-top: 20px;"></div>
+          
+          <script>
+              const cropDetails = {
+                  "Cash Crops in Region 2": "Region 2 is favorable for cash crops like tobacco, cotton, and sugarcane. The moderate rainfall and fertile soils enable consistent yields and make it a key commercial farming area.",
+                  "Fruits in Region 2": "Region 2 supports subtropical fruits such as citrus (oranges, lemons), mangoes, guavas, and avocados. These fruits thrive in the warm climate and moderate rainfall.",
+                  "Horticulture in Region 2": "Tomatoes, onions, cabbages, and leafy greens grow well, especially with irrigation. Many farmers in this region supply urban and export markets.",
+                  "Cereals & Grains in Region 2": "Maize is the dominant crop due to the reliable rainfall. Sorghum and wheat are also grown depending on soil type and elevation.",
+                  "Legumes & Pulses in Region 2": "Groundnuts, soybeans, and cowpeas are important rotation crops, improving soil fertility while providing food and cash income for farmers."
+              };
+          
+              const selectElement = document.getElementById("crop-select");
+              const infoDiv = document.getElementById("crop-info");
+          
+              selectElement.addEventListener("change", function () {
+                  const value = this.value;
+                  infoDiv.innerHTML = `<p><strong>${value}</strong><br>${cropDetails[value]}</p>`;
+              });
+          </script>
+          
+            
+      <!-- Chatbase Embed -->
+  <script>
+    (function(){
+      if(!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...arguments) => {
+          if (!window.chatbase.q) { window.chatbase.q = [] }
+          window.chatbase.q.push(arguments)
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") return target.q;
+            return (...args) => target(prop, ...args)
+          }
+        })
+      }
+      const onLoad = function() {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "5uPNi6XSU5MloP3WN0mgw";
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script)
+      };
+      if (document.readyState === "complete") onLoad()
+      else window.addEventListener("load", onLoad)
+    })();
+  </script>
+
+
+            
+
+            <div>
+                <p>Support Services:</p>
+                <p>Extension services are available through ADSS AI ChatBot.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- script tags -->
+    <script src="js/cart.js"></script>
+</body>
+</html>

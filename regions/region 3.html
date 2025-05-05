@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Region Three | ADSS</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="pagination">
+        <p>ADSS >Crop Advisory</p>
+    </div>
+    <!-- region section -->
+    <section class="product-container">
+        <!-- left side -->
+        <div class="img-card">
+            <img src="img/sorghum-2838307_640.jpg" alt="Region 1 Overview" id="featured-image">
+            <!-- small img -->
+            <div class="small-Card">
+                <img src="img/trees-5840571_640.jpg" alt="Climate Map" class="small-Img">
+                <img src="img/sorghum-2838307_640.jpg" alt="Crops in Region 1" class="small-Img">
+                <img src="img/tobacco-16771_640.jpg" alt="Farming Practice" class="small-Img">
+                <img src="img/sunflower-1627193_640.jpg" alt="Landscape" class="small-Img">
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="product-info">
+            <h3>Farming Region Three - Transition Zone</h3>
+            <h5>Annual Rainfall: 650mm - 800mm</h5>
+            <p>Region Three lies between the high rainfall areas and the drier zones, covering parts of Masvingo, Midlands, and southern Mashonaland. It has moderately reliable rainfall and is susceptible to periodic droughts, especially during mid-season dry spells.</p>
+            <p>This region is best suited for semi-intensive farming of drought-tolerant crops such as maize, sunflower, sorghum, and groundnuts. Livestock rearing, particularly cattle and goats, also plays a significant role in the farming systems of this zone.</p>
+
+                        
+            <div class="sizes">
+                <p>Region 3 Crop Category Guide:</p>
+                <select name="crops" id="crop-select" class="size-option">
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="Cash Crops in Region 3">Cash Crops in Region 3</option>
+                    <option value="Fruits in Region 3">Fruits in Region 3</option>
+                    <option value="Horticulture in Region 3">Horticulture in Region 3</option>
+                    <option value="Cereals & Grains in Region 3">Cereals & Grains in Region 3</option>
+                    <option value="Legumes & Pulses in Region 3">Legumes & Pulses in Region 3</option>
+                </select>
+            </div>
+            
+            <div id="crop-info" class="crop-info" style="margin-top: 20px;"></div>
+            
+            <script>
+                const cropDetails = {
+                    "Cash Crops in Region 3": "Tobacco and cotton remain key cash crops in Region 3, though yields may vary based on rainfall distribution. Some small-scale sugarcane farming is also practiced with irrigation.",
+                    "Fruits in Region 3": "Fruits such as mangoes, guavas, pawpaws, and citrus are suitable. Irrigation enhances productivity, especially in drier years.",
+                    "Horticulture in Region 3": "Vegetables like tomatoes, onions, green beans, and butternuts are grown in well-watered plots or near rivers. Drip irrigation systems are increasingly used.",
+                    "Cereals & Grains in Region 3": "Maize is widely grown as the staple crop, but sorghum and millet are better suited to rainfall variability. Small grains are promoted for food security.",
+                    "Legumes & Pulses in Region 3": "Groundnuts, sugar beans, and cowpeas do well, especially in rotation with cereals. They improve soil fertility and provide household nutrition and income."
+                };
+            
+                const selectElement = document.getElementById("crop-select");
+                const infoDiv = document.getElementById("crop-info");
+            
+                selectElement.addEventListener("change", function () {
+                    const value = this.value;
+                    infoDiv.innerHTML = `<p><strong>${value}</strong><br>${cropDetails[value]}</p>`;
+                });
+            </script>
+            
+            
+      <script>
+        (function()
+        {if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{
+          if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+          window.chatbase=new Proxy(window.chatbase,{get(target,prop){
+            if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}
+            const onLoad=function(){const script=document.createElement("script");
+            script.src="https://www.chatbase.co/embed.min.js";
+            script.id="-EP_EQoiONNzBlIyGpYye";script.domain="www.chatbase.co";
+            document.body.appendChild(script)};
+            if(document.readyState==="complete"){onLoad()}
+            else{window.addEventListener("load",onLoad)}})();
+        </script>
+      
+
+
+            <div>
+                <p>Support Services:</p>
+                <p>Extension services are available through ADSS AI ChatBot.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- script tags -->
+    <script src="js/cart.js"></script>
+</body>
+</html>
